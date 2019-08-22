@@ -1,0 +1,29 @@
+.titulo_borde1{
+    border-bottom: 1px solid #5b5b5b7a;  
+}
+
+.loader 
+{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../imagenes/cargando.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+.titulo_usuarios{
+    font-size: 15px;  
+}
+
+.titulo_uno{
+    font-size: 17px;  
+    font-weight: bold;
+}
+
+.negrita
+{
+    font-weight: bold;
+}

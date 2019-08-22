@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+Options All -Indexes
+
+AddDefaultCharset utf-8
+
+SetEnvIfNoCase user-Agent ^FrontPage [NC,OR] 
+SetEnvIfNoCase user-Agent ^Java.* [NC,OR] 
+SetEnvIfNoCase user-Agent ^Microsoft.URL [NC,OR] 
+SetEnvIfNoCase user-Agent ^MSFrontPage [NC,OR] 
+SetEnvIfNoCase user-Agent ^Offline.Explorer [NC,OR] 
+SetEnvIfNoCase user-Agent ^[Ww]eb[Bb]andit [NC,OR] 
+SetEnvIfNoCase user-Agent ^Zeus [NC] 
+Order Allow,Deny 
+Allow from all 
+Deny from env=bad_bot
