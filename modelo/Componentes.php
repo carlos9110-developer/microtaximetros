@@ -49,7 +49,7 @@ Class Componentes
 	// función donde se listan los componentes que tienen las unidades agotadas
 	public function listar_componentes_agotados()
 	{
-		$sql = " SELECT * FROM componentes  WHERE num_unidades < cantidad_minima OR num_unidades='0' ";
+		$sql = " SELECT * FROM componentes  WHERE num_unidades < cantidad_minima  ";
 		return ejecutar_consulta($sql);
 	}
 
@@ -71,7 +71,7 @@ Class Componentes
 	// función donde se trae el número de componentes agotados
 	public function traer_numero_componentes_agotados()
 	{
-		$sql    = "SELECT COUNT(id) AS cuenta FROM componentes WHERE num_unidades < cantidad_minima OR num_unidades='0'   ";
+		$sql    = "SELECT COUNT(id) AS cuenta FROM componentes WHERE num_unidades < cantidad_minima    ";
 		$result = ejecutar_consulta_retornar_array($sql);
 		return $result['cuenta'];
 	}
